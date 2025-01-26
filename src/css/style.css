@@ -1,0 +1,130 @@
+/* Normalizer */
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
+/* Generella regler */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 53, 84);
+}
+
+header .logo a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+}
+
+/* Meny på mobil */
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgb(15, 53, 84);
+    flex-direction: column;
+    justify-content: center;
+
+    /* Ändras till "display: flex; med JavaScript */
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav li {
+    padding: 2.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+/* Knappar */
+
+#menu-button-open, #menu-button-close {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.2rem;
+}
+
+#menu-button-open svg, #menu-button-close svg {
+    padding-left: 0.2rem;
+}
+
+/* Knapp för att stänga meny */
+#menu-button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+}
+
+/* Header på desktop */
+@media (min-width: 1024px) {
+    header {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav#nav-menu {
+        display: block !important;
+        position: static;
+        height: auto;
+        width: auto
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 0;
+    }
+    
+    #menu-button-open {
+        display: none;
+    }
+
+    #menu-button-close {
+        display: none;
+    }
+}
+
+/* Main */
+main {
+    min-height: 84vh;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(15, 53, 84);
+    padding: 1.5rem 2rem;
+    color: white;
+}
