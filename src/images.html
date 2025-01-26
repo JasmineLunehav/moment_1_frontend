@@ -5,42 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bilder</title>
+    <!-- CSS och JS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" type="module"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0958efdf44.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <!-- "Logotyp" -->
-        <div class="logo">
-            <a href="index.html">Moment 1 - DT211G</a>
-        </div>
-        <!-- Knapp för att öppna meny -->
-        <button id="menu-button-open">
-            <span>Meny</span>
-            <span><i class="fa-solid fa-bars fa-xl" style="color: #000000;"></i></span>
-        </button>
-        <!-- Navigering -->
-        <nav id="nav-menu">
-            <!-- Knapp för att stänga meny -->
-            <button id="menu-button-close">
-                <span>Stäng</span>
-                <span><i class="fa-solid fa-xmark fa-xl" style="color: #000000;"></i></span>
+        <div class="max-width">
+            <!-- "Logotyp" -->
+            <div class="logo">
+                <a href="index.html">Moment 1 - DT211G</a>
+            </div>
+            <!-- Knapp för att öppna meny -->
+            <button id="menu-button-open">
+                <span>Meny</span>
+                <span><i class="fa-solid fa-bars fa-xl" style="color: #000000;"></i></span>
             </button>
-            <!-- Navigeringslänkar -->
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="images.html">Bilder</a></li>
-                <li><a href="work-process.html">Arbetsprocessen</a></li>
-            </ul>
-        </nav>
+            <!-- Navigering -->
+            <nav id="nav-menu">
+                <!-- Knapp för att stänga meny -->
+                <button id="menu-button-close">
+                    <span>Stäng</span>
+                    <span><i class="fa-solid fa-xmark fa-xl" style="color: #000000;"></i></span>
+                </button>
+                <!-- Navigeringslänkar -->
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="images.html">Bilder</a></li>
+                    <li><a href="work-process.html">Arbetsprocessen</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <main>
 
+    <main class="max-width">
+        <h1>Bilder</h1>
+        <section id="images">
+            <picture>
+                <source srcset="images/goat.jpeg?as=avif&width=600" type="image/avif">
+                <source srcset="images/goat.jpeg?as=webp&width=600" type="image/webp">
+                <img src="images/goat.jpeg?width=600" alt="Bild på en get med svart bakgrund" width="600" height="450">
+            </picture>
+            <picture>
+                <source srcset="images/hen.jpeg?as=avif&width=600" type="image/avif">
+                <source srcset="images/hen.jpeg?as=webp&width=600" type="image/webp">
+                <img src="images/hen.jpeg?width=600" alt="Bild på en get med svart bakgrund" width="600" height="450">
+            </picture>
+            <picture>
+                <source srcset="images/simo.jpeg?as=avif&width=600" type="image/avif">
+                <source srcset="images/simo.jpeg?as=webp&width=600" type="image/webp">
+                <img src="images/simo.jpeg?width=600" alt="Bild på en get med svart bakgrund" width="600" height="450">
+            </picture>
+            <picture>
+                <source srcset="images/sky.jpeg?as=avif&width=600" type="image/avif">
+                <source srcset="images/sky.jpeg?as=webp&width=600" type="image/webp">
+                <img src="images/sky.jpeg?width=600" alt="Bild på en get med svart bakgrund" width="600" height="450">
+            </picture>
+            <picture>
+                <source srcset="images/zacco.jpeg?as=avif&width=600" type="image/avif">
+                <source srcset="images/zacco.jpeg?as=webp&width=600" type="image/webp">
+                <img src="images/zacco.jpeg?width=600" alt="Bild på en get med svart bakgrund" width="600" height="450">
+            </picture>
+        </section>
     </main>
 
     <footer>
-        <p>Skapad av Jasmine Lunehav.</p>
-        <p>Kursen "Frontend-baserad webbutveckling" (DT211G) på Mittuniversitetet.</p>
+        <div class="max-width">
+            <p>Skapad av Jasmine Lunehav.</p>
+            <p>Kursen "Frontend-baserad webbutveckling" (DT211G) på Mittuniversitetet.</p>
+        </div>
     </footer>
 </body>
 

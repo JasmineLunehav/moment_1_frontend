@@ -11,6 +11,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+.max-width {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
 /* Header */
 
 header {
@@ -29,6 +39,13 @@ header .logo a {
     text-decoration: none;
     font-size: 1.3rem;
     color: white;
+}
+
+header .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
 }
 
 /* Meny på mobil */
@@ -118,7 +135,12 @@ nav a {
 
 /* Main */
 main {
+    padding-top: 7rem;
     min-height: 84vh;
+}
+
+main h1 {
+    margin: 0;
 }
 
 /* Footer */
@@ -127,4 +149,27 @@ footer {
     background-color: rgb(15, 53, 84);
     padding: 1.5rem 2rem;
     color: white;
+    margin-top: 5rem;
+}
+
+/* Bilder-sidan */
+@media(min-width: 601px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    main section#images {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1rem;
+    }
+}
+
+@media(min-width: 1200px) {
+    main section#images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
